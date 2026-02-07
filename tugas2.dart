@@ -1,24 +1,9 @@
-String nama = "Raditya TD";// Full name
-int umur = 19; // Age in years
-double tinggi_badan = 169.5;// Height in cm
-bool status_mahasiswa = true;// Student status
-List buku_fav = ["Atomic Habits", "The Subtle Art of Not Giving a F*ck", "Deep Work"];// List of favorite books
+
 void main(){
-  final Map<String, dynamic> tambahan = {
-    "alamat": "Tanjung Priok",
-    "profesi": "Mahasiswa"
-  };
-  print("Nama: $nama");
-  print("Umur: $umur");
-  print("Tinggi Badan: $tinggi_badan cm");
-  if (status_mahasiswa) {
-    print("Status: Mahasiswa");
-  } else {
-    print("Status: Bukan Mahasiswa");
-  }
-  print("Buku Favorit: $buku_fav");
-
-  print("Alamat: ${tambahan['alamat']}");
-  print("Profesi: ${tambahan['profesi']}");
-
+ stdout.write("Masukan nilai UTS:");
+ int nilai_uts = int.parse(stdin.readLineSync()!);
+ stdout.write("Masukan nilai UAS:");
+ int nilai_uas = int.parse(stdin.readLineSync()!);
+ double rata_rata = (nilai_uts + nilai_uas) / 2;
+ stdout.writeln("Rata-rata nilai: $rata_rata");
 }
