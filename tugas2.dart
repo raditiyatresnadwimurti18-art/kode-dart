@@ -29,13 +29,19 @@ void main() {
 
   bool Luts = uts >= 60;
   bool Luas = uas >= 60;
+  bool rata = (uts + uas) / 2 >= 70;
   bool Lkehadiran = kehadiran >= 75;
+  bool lulus = rata && Lkehadiran && Luts && Luas;
   print("Nilai UTS: $uts -> ${Luts ? "Lulus" : "Tidak Lulus"}");
   print("Nilai UAS: $uas -> ${Luas ? "Lulus" : "Tidak Lulus"}");
+  print("Rata-rata: ${(uts + uas) / 2} -> ${rata ? "Lulus" : "Tidak Lulus"}");
   print("Kehadiran: $kehadiran% -> ${Lkehadiran ? "Lulus" : "Tidak Lulus"}");
-  if (Luts && Luas && Lkehadiran) {
-    print("Status Akhir: Lulus");
+  print("\n");
+  if (lulus) {
+    print("Selamat anda lulus di semua bidang.");
   } else {
-    print("Status Akhir: Tidak Lulus");
+    print(
+      "Salah satu nilai anda tidak memenuhi syarat kelulusan.Coba lagi semester depan.",
+    );
   }
 }
